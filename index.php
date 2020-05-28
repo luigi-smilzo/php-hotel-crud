@@ -1,21 +1,14 @@
 <?php 
 include __DIR__ . '/partials/home/server.php';
+include __DIR__ . '/partials/head.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/main.css">
-    <title>Hotel php-crud</title>
-</head>
 <body>
     <main class="container">
         <div class="row">
             <div class="col-12">
                 <header>
-                    <h2>Hotel rooms</h2>
+                    <h2 class="text-primary">Hotel rooms</h2>
                 </header>
 
                 <table class="table">
@@ -38,7 +31,7 @@ include __DIR__ . '/partials/home/server.php';
                                     <td><?php echo $room['room_number']; ?></td>
                                     <td><?php echo $room['floor']; ?></td>
                                     <td>
-                                        <a class="text-success" href="">View</a>
+                                        <a class="text-success" href="./show.php?id=<?php echo $room['id']; ?>">View</a>
                                     </td>
                                     <td class="text-primary">Update</td>
                                     <td class="text-danger">Delete</td>
