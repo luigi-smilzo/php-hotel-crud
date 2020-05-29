@@ -1,7 +1,12 @@
 <?php 
 include __DIR__ . '/partials/home/server.php';
 include __DIR__ . '/partials/templates/head.php';
-?>
+
+if ( !empty($_GET['del']) ) { ?>
+    <div class="alert alert-success">
+        Room deleted.
+    </div>
+<?php } ?>
 
     <main class="container">
         <div class="row">
@@ -33,7 +38,15 @@ include __DIR__ . '/partials/templates/head.php';
                                         <a class="text-success" href="./show.php?id=<?php echo $room['id']; ?>">View</a>
                                     </td>
                                     <td class="text-primary">Update</td>
-                                    <td class="text-danger">Delete</td>
+                                    <td class="text-danger">
+                                        <form action="./partials/delete/server.php"
+                                            method="POST">
+                                            <input type="hidden" name="id"
+                                                value="<?php echo $room['id']; ?>">
+                                            <input type="submit" class="btn btn-danger"
+                                                value="delete">
+                                        </form>
+                                    </td>
                                </tr> 
                             <?php endforeach;
                         }
