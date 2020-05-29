@@ -1,9 +1,8 @@
 <?php 
 include __DIR__ . '/partials/home/server.php';
-include __DIR__ . '/partials/head.php';
+include __DIR__ . '/partials/templates/head.php';
 ?>
 
-<body>
     <main class="container">
         <div class="row">
             <div class="col-12">
