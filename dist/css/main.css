@@ -10930,3 +10930,13 @@ a.text-dark:focus {
   }
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  flex-grow: 1;
+}
+

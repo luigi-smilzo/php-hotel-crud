@@ -27,7 +27,7 @@ if ( !empty($_GET['del']) ) { ?>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="text-right">
                     <?php 
                     if ( !empty($rooms) ) {
                         foreach ($rooms as $room) : ?>
@@ -47,7 +47,7 @@ if ( !empty($_GET['del']) ) { ?>
                                         <input type="hidden" name="id"
                                             value="<?php echo $room['id']; ?>">
                                         <input type="submit" class="btn btn-danger"
-                                            value="delete">
+                                            value="Delete">
                                     </form>
                                 </td>
                             </tr> 
@@ -59,6 +59,7 @@ if ( !empty($_GET['del']) ) { ?>
         </div>
     </div>
 </main>
-    
-</body>
-</html>
+
+<?php 
+include __DIR__ . '/partials/templates/footer.php';
+?>

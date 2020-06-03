@@ -35,3 +35,7 @@ include __DIR__ . '/partials/templates/head.php';
         </div>
     </div>
 </main>
+
+<?php 
+include __DIR__ . '/partials/templates/footer.php';
+?>
