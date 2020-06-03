@@ -1,24 +1,14 @@
 <?php
 include_once __DIR__ . '/../database.php';
+include_once __DIR__ . '/../functions.php';
 
 // Check ID existence
 if ( empty($_POST['id']) ) {
     die('Errore');
 }
-
-// Query
+ // Get ID and redirect URL
 $id_room = $_POST['id'];
-$sql = "DELETE FROM `stanze` WHERE `id` = $id_room";
-$result = $conn->query($sql);
+$url = "$base_path?del=success";
 
-// Redirect
-if ( $result && $conn->affected_rows > 0 ) {
-    header("Location: $base_path?del=$id_room");
-} elseif ( $result ) {
-    echo 'No room found';
-} else {
-    echo 'Error';
-}
-
-// Close connection
-$conn->close();
+// Delete room by ID
+deleteById($conn, 'stanze', $id_room, $url);
