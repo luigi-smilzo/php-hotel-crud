@@ -24,10 +24,16 @@ include __DIR__ . '/partials/templates/head.php';
                         <li class="list-group-item">
                             Floor: <?php echo $room['floor'] ?>
                         </li>
+                        <li class="list-group-item">
+                            Created: <?php echo $room['created_at'] ?>
+                        </li>
+                        <li class="list-group-item">
+                            Updated: <?php echo $room['updated_at'] ?>
+                        </li>
                     </ul>
                 </div>
 
-                <a class="btn btn-primary" href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">Edit</a>
+                <a class="btn btn-primary" href="<?php echo $base_path; ?>edit.php?id=<?php echo $room['id']; ?>">Edit</a>
             </div>
         </div>
     </main>

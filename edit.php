@@ -33,6 +33,7 @@ include __DIR__ . '/partials/update/server-edit.php';
                     <input class="btn btn-primary" type="submit" value="Save">
                 </div>
                 
+                <a class="btn btn-primary" href="<?php echo $base_path; ?>show.php?id=<?php echo $room['id']; ?>">Details</a>
             </form>
         </div>
     </div>
